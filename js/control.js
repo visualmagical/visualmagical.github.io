@@ -11,7 +11,7 @@ let hi = document.body.scrollHeight - 4; // crutch
 const growHeight = hi / 4 * 3;
 const growCoef = 160;
 const maxK = growHeight / growCoef;
-const trackLength = 281 * 20 // in frames
+const trackLength = 281 * 40 // in frames
 const addK = maxK / trackLength;
 let xincr = 0, yincr = 0;
 const analyser = audioCtx.createAnalyser();
