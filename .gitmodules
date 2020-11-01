@@ -1,0 +1,18 @@
+[submodule "maribou"]
+	path = maribou
+	url = https://github.com/visualmagical/maribou
+[submodule "text-to-line"]
+	path = text-to-line
+	url = https://github.com/visualmagical/text-to-line
+[submodule "see-the-sound"]
+	path = see-the-sound
+	url = https://github.com/visualmagical/see-the-sound
+[submodule "demos"]
+	path = demos
+	url = https://github.com/visualmagical/demos
+[submodule "fieldscapes"]
+	path = fieldscapes
+	url = https://github.com/visualmagical/fieldscapes
+[submodule "open-eye-signal"]
+	path = open-eye-signal
+	url = https://github.com/visualmagical/open-eye-signal
