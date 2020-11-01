@@ -198,7 +198,7 @@ function renderChart() {
     cancelAnimationFrame(runChart);
     cancelAnimationFrame(runCircles);
     trigger.removeEventListener("click", startTheShow.bind(this));
-    trigger.classList.add("default");
+    trigger.classList.add("ended");
   }
 }
 
