@@ -35,7 +35,6 @@ const ranVals = [0, 0.5, -0.5];
 //      UI      //
 
 const wrapper = document.getElementById('visuals');
-// document.addEventListener("click", startTheShow.bind(this));
 audioElement.addEventListener("ended", toStart.bind(this));
 const trigger = document.querySelector(".visual");
 trigger.addEventListener("click", startTheShow.bind(this));
@@ -196,9 +195,11 @@ function renderChart() {
   p++;
   if (audioElement.currentTime >= 270) {
     cancelAnimationFrame(runChart);
-    cancelAnimationFrame(runCircles);
     trigger.removeEventListener("click", startTheShow.bind(this));
     trigger.classList.add("ended");
+  }
+  if (audioElement.currentTime >= 280) {
+    cancelAnimationFrame(runCircles);
   }
 }
 
