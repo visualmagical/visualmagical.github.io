@@ -11,7 +11,7 @@ let hi = document.body.scrollHeight - 4; // crutch
 const growHeight = hi / 4 * 3;
 const growCoef = 160;
 const maxK = growHeight / growCoef;
-const trackLength = 281 * 40 // in frames
+const trackLength = 281 * 60 // in frames
 const addK = maxK / trackLength;
 let xincr = 0, yincr = 0;
 const analyser = audioCtx.createAnalyser();
@@ -193,13 +193,11 @@ function renderChart() {
       .attr("d", genData)
 
   p++;
-  if (audioElement.currentTime >= 270) {
+  if (audioElement.currentTime >= 277) {
     cancelAnimationFrame(runChart);
     trigger.removeEventListener("click", startTheShow.bind(this));
     trigger.classList.add("ended");
-  }
-  if (audioElement.currentTime >= 280) {
-    cancelAnimationFrame(runCircles);
+    setTimeout(() => cancelAnimationFrame(runCircles), 5000);
   }
 }
 

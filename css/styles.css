@@ -484,6 +484,7 @@ align-items: center;
 
 .visual.ended {
   cursor: default;
+  pointer-events: none;
 }
 
 .visual .octy{
