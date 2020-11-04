@@ -36,8 +36,6 @@ const ranVals = [0, 0.5, -0.5];
 
 const wrapper = document.getElementById('visuals');
 audioElement.addEventListener("ended", toStart.bind(this));
-const trigger = document.querySelector(".visual");
-trigger.addEventListener("click", startTheShow.bind(this));
 
 
 function startTheShow() {
@@ -119,7 +117,10 @@ bg.setAttributeNS(null, 'height', 400);
 bg.setAttributeNS(null, 'width', 400);
 bg.setAttributeNS(null, 'fill', "#000");
 pattern.appendChild(bg);
-
+const trigger = document.querySelector(".ctrls");
+trigger.addEventListener("click", startTheShow.bind(this));
+const octy = document.querySelector(".octy");
+octy.addEventListener("click", startTheShow.bind(this));
 
 const lineGenerator = d3.line().curve(d3.curveBasisClosed);
 const initialAry = [...Array(pointAmount)].map(() => [355, 318.5])
@@ -196,6 +197,7 @@ function renderChart() {
   if (audioElement.currentTime >= 277) {
     cancelAnimationFrame(runChart);
     trigger.removeEventListener("click", startTheShow.bind(this));
+    octy.removeEventListener("click", startTheShow.bind(this));
     trigger.classList.add("ended");
     setTimeout(() => cancelAnimationFrame(runCircles), 5000);
   }

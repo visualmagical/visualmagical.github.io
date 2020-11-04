@@ -482,16 +482,10 @@ align-items: center;
   height: 100%;
 }
 
-.visual.ended {
-  cursor: default;
-  pointer-events: none;
-}
-
 .visual .octy{
   cursor: pointer;
 }
-
-.visual.ended .octy{
+.ctrls.ended + .octy{
   cursor: default;
   pointer-events: none;
 }
@@ -512,12 +506,13 @@ align-items: center;
   opacity: 1;
 }
 
-.play {
+.ctrls {
   cursor: pointer;
 }
 
-.visual.ended .play{
+.ctrls.ended{
   cursor: default;
+  pointer-events: none;
 }
 
 .icon:hover {
